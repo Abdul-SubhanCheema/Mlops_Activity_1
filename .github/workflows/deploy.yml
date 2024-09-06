@@ -18,7 +18,6 @@ jobs:
         with:
           python-version: '3.x'  # Specify the Python version
 
-
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v22
         with:
