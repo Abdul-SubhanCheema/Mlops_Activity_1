@@ -33,7 +33,7 @@
 
             const sentence = document.getElementById("sentence").value;
             try {
-                const response = await fetch("/predict", {
+                const response = await fetch("https://vercel.com/abdul-subhans-projects/github-vercel-deploy/predict", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
