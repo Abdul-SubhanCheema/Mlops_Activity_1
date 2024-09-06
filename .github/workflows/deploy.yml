@@ -18,9 +18,10 @@ jobs:
         with:
           python-version: '3.x'  # Specify the Python version
 
+
       - name: Deploy to Vercel
-        run: |
-          curl -sL https://github.com/vercel/vercel-action/releases/download/v1.0.0/vercel-action.tar.gz | tar xz
-          ./vercel-action/bin/vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+        uses: amondnet/vercel-action@v22
+        with:
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
